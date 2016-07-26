@@ -1,0 +1,11 @@
+<form class="new-comment" action="/comments" method="POST">
+    <div class="form-group">
+        <input type="text" name="text" placeholder="Comment">
+    </div>
+    <% puts post.inspect %>
+    <%= post.id.inspect %>
+        <input type="hidden" name="post_id" value="<%= post.id %>">
+    <div class="form-group">
+        <button class="button" type="submit">Submit</button>
+    </div>
+</form>

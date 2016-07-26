@@ -12,12 +12,15 @@
             <span class="comment-count"><%= post.comment_count %> comments
             </span>
     </div>
+    
+    <%= erb(:"shared/new_comment", { locals: { post: post }}) %>
+    
     <ul class="comments">
         <% post.comments.each do |comment| %> 
             <li>
                 <p>
                     <%= comment.user.username %>: <%= comment.text %>
-                 </p>
+                </p>
             </li>
         <% end %>
     </ul>
